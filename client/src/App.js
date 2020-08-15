@@ -9,6 +9,7 @@ import './App.css';
 import HomePage from './pages/HomePage.jsx';
 import TestPage from './pages/TestPage.jsx';
 import SecretPage from './pages/SecretPage.jsx';
+import Shop from './pages/Shop.jsx';
 // import ErrorPage from './pages/ErrorPage.jsx';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -34,6 +35,7 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route path="/test" component={TestPage} />
             <PrivateRoute path="/secret" component={SecretPage} />
+            <Route path="/shop" component={Shop} />
             {/* <Route path="*" component={ErrorPage} /> */}
           </Switch>
         </Router>
