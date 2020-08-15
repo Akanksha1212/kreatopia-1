@@ -10,7 +10,7 @@ import {
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Store from "../components/store";
 import "./style.scss";
-import FooterPage from '../components/footer';
+import Footer from '../components/footer';
 
 export default (props) => {
     const [openPanel, setOpenPanel] = useState(false);
@@ -30,7 +30,7 @@ export default (props) => {
         </Toolbar>
       </AppBar>
       <Store/>
-      <FooterPage/>
+      <Footer/>
     </div>
   );
 };
