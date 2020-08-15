@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, FormControl, FormHelperText, Input, InputLabel } from '@material-ui/core';
-import { increment, decrement } from '../slices/userSlice';
+// import { increment, decrement } from '../slices/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default (props) => {
@@ -12,12 +12,12 @@ export default (props) => {
 
   function plus() {
     let num = Number(form.number)
-    dispatch(increment(num))
+    // dispatch(increment(num))
   }
 
   function minus() {
     let num = Number(form.number)
-    dispatch(decrement(num))
+    // dispatch(decrement(num))
   }
 
   function formChange(e) {

@@ -15,7 +15,7 @@ import FooterPage from '../components/footer';
 export default (props) => {
     const [openPanel, setOpenPanel] = useState(false);
   return (
-    <div>
+    <div style={{minHeight: "100vh"}}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
