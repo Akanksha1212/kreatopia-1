@@ -10,6 +10,10 @@ import HomePage from './pages/HomePage.jsx';
 import TestPage from './pages/TestPage.jsx';
 import SecretPage from './pages/SecretPage.jsx';
 import Shop from './pages/Shop.jsx';
+import ComicList from './pages/ComicList';
+import ComicDetail from './pages/ComicDetail';
+import ReadChapter from './pages/ReadChapter';
+import CreatorDashboard from './pages/CreatorDashboard';
 // import ErrorPage from './pages/ErrorPage.jsx';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -33,6 +37,10 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
+            <Route path="/dashboard" component={CreatorDashboard} />
+            <Route exact path="/comic" component={ComicList} />
+            <Route path="/comic/:ComicId/:ChapterId" component={ReadChapter} />
+            <Route path="/comic/:ComicId/" component={ComicDetail} />
             <Route path="/test" component={TestPage} />
             <PrivateRoute path="/secret" component={SecretPage} />
             <Route path="/shop" component={Shop} />

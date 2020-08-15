@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from '../components/Navbar.jsx';
 import {
   Button,
   Typography,
@@ -28,6 +29,7 @@ export default (props) => {
   const classes = useStyles();
   return (
     <div>
+<<<<<<< HEAD
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -44,6 +46,9 @@ export default (props) => {
           </div>
         </Toolbar>
       </AppBar>
+=======
+      <Navbar />
+>>>>>>> development
       <div className="rowC">
         <img alt=".." src="./images/creativity.jpg" /> <SignIn />
       </div>

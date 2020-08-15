@@ -1,6 +1,5 @@
 function errorHandler(err, req, res, next) {
-    // console.log('Error:', err)
-    // let status, error = ''
+    console.log('Error:', err)
 
     if (err.name === 'SequelizeValidationError') {
         status = 400
@@ -19,4 +18,4 @@ function errorHandler(err, req, res, next) {
     res.status(status).json(error)
 }
 
-module.exports = errorHandler
+module.exports = errorHandler;

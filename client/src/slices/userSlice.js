@@ -4,7 +4,7 @@ export const slice = createSlice({
   name: 'user',
   initialState: {
     number: 0, // just a test number
-    authenticated: false, // change this to true to get access to PrivateRoute
+    authenticated: true, // change this to true to get access to PrivateRoute
   },
   reducers: {
     increment: (state, action) => {
@@ -18,7 +18,7 @@ export const slice = createSlice({
   },
 });
 
-export const { increment, decrement, incrementByAmount } = slice.actions;
+export const { increment, decrement } = slice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
