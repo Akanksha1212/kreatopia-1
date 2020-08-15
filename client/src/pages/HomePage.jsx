@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from '../components/Navbar.jsx';
 import {
   Button,
   Typography,
@@ -14,18 +15,7 @@ import "./style.scss";
 export default (props) => {
   return (
     <div>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-          
-          <Typography variant="h6">KREATOPIA</Typography>
-          
-        </Toolbar>
-      </AppBar>
+      <Navbar />
       <div className="rowC">
         <img alt=".." src="./images/creativity.jpg" /> <SignIn />
       </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar.jsx';
 import ResultList from '../components/ResultList.jsx';
 import Pagination from '../components/Pagination.jsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -65,16 +66,7 @@ export default (props) => {
 
   return (
     <div style={{minHeight: "100vh"}}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-          <Typography variant="h6">KREATOPIA</Typography>
-        </Toolbar>
-      </AppBar>
+      <Navbar/>
       <Container maxWidth="md">
         <Card raised={true} style={{padding: "3em"}}>
         <Card className={classes.root} variant="outlined">
