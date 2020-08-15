@@ -110,7 +110,7 @@ export default (props) => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic2.minitokyo.net%2Fview%2F17%2F28%2F446417.jpg&f=1&nofb=1"
+          image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F13%2Fe5%2F91%2F13e59118a19d2a7bc4d26f92c96c54b8.jpg&f=1&nofb=1"
           title="Comics"
         />
         <CardContent>
