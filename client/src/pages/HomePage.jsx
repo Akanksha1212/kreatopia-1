@@ -5,10 +5,11 @@ import {
   IconButton,
   AppBar,
   Toolbar,
+  makeStyles,
 } from "@material-ui/core";
 import SignIn from "../components/signIn";
-
 import "./style.scss";
+
 
 export default (props) => {
   return (
@@ -20,7 +21,9 @@ export default (props) => {
             color="inherit"
             aria-label="menu"
           ></IconButton>
+          
           <Typography variant="h6">KREATOPIA</Typography>
+          
         </Toolbar>
       </AppBar>
       <div className="rowC">
@@ -32,6 +35,10 @@ export default (props) => {
       <Button onClick={() => props.history.push("/test")}>
         Go to test page
       </Button>
+      <Button onClick={() => props.history.push("/shop")}>
+        Shop
+      </Button>
+  
     </div>
   );
 };
