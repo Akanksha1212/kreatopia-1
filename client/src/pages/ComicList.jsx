@@ -4,10 +4,7 @@ import ResultList from '../components/ResultList.jsx';
 import Pagination from '../components/Pagination.jsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-  AppBar,
   Button,
-  Toolbar,
-  IconButton,
   Typography,
   Container,
   Card,

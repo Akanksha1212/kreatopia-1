@@ -3,10 +3,6 @@ import Navbar from '../components/Navbar.jsx';
 import {
   Button,
   Typography,
-  IconButton,
-  AppBar,
-  Toolbar,
-  makeStyles,
 } from "@material-ui/core";
 import SignIn from "../components/signIn";
 import "./style.scss";

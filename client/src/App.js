@@ -37,12 +37,12 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route path="/dashboard" component={CreatorDashboard} />
             <Route exact path="/comic" component={ComicList} />
             <Route path="/comic/:ComicId/:ChapterId" component={ReadChapter} />
             <Route path="/comic/:ComicId/" component={ComicDetail} />
             <Route path="/test" component={TestPage} />
             <PrivateRoute path="/secret" component={SecretPage} />
+            <PrivateRoute path="/user/dashboard" component={CreatorDashboard} />
             <Route path="/shop" component={Shop} />
             {/* <Route path="*" component={ErrorPage} /> */}
           </Switch>

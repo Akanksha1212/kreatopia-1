@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import Navbar from '../components/Navbar.jsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {
-  AppBar,
-  Toolbar,
-  IconButton,
   Typography,
   LinearProgress,
   Container,
@@ -55,16 +53,7 @@ export default (props) => {
 
   return (
     <div style={{minHeight: "100vh"}}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-          ></IconButton>
-          <Typography variant="h6">KREATOPIA</Typography>
-        </Toolbar>
-      </AppBar>
+      <Navbar />
       <div style={{height: "70vh"}}>
         <div style={{
           backgroundImage: `url(${comicData.thumbnail})`,

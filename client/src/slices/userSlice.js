@@ -3,22 +3,42 @@ import { createSlice } from '@reduxjs/toolkit';
 export const slice = createSlice({
   name: 'user',
   initialState: {
-    number: 0, // just a test number
+    // number: 0, // just a test number
     authenticated: true, // change this to true to get access to PrivateRoute
+    username: null,
+    email: null,
+    role: false,
   },
   reducers: {
-    increment: (state, action) => {
-      state.number += action.payload
-      console.log('Number from state:', state.number)
+    // increment: (state, action) => {
+    //   state.number += action.payload
+    //   console.log('Number from state:', state.number)
+    // },
+    // decrement: (state, action) => {
+    //   state.number -= action.payload
+    //   console.log('Number from state:', state.number)
+    // },
+    login: (state, action) => {
+      console.log('Payload', action.payload)
+      state.username = action.payload.user.username
+      state.email = action.payload.user.email
+      localStorage.setItem('token', state.token || localStorage.getItem('token'))
+      state.authenticated = true
+      console.log('User state after log in:', JSON.stringify(state))
     },
-    decrement: (state, action) => {
-      state.number -= action.payload
-      console.log('Number from state:', state.number)
+    logout: state => {
+      state.token = null
+      state.username = null
+      state.email = null
+      state.role = false
+      localStorage.removeItem('token')
+      state.authenticated = false
+      console.log('User state after log out:', state)
     },
   },
 });
 
-export const { increment, decrement } = slice.actions;
+export const { login, logout } = slice.actions;
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
