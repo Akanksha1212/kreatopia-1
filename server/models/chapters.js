@@ -1,8 +1,8 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Chapter = sequelize.define('Chapter', {
-    UserId: DataTypes.STRING,
-    ComicId: DataTypes.STRING,
+    UserId: DataTypes.INTEGER,
+    ComicId: DataTypes.INTEGER,
     title: {
       type: DataTypes.STRING,
       allowNull: false,

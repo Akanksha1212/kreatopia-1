@@ -17,13 +17,17 @@ class Controller {
     }
 
     static findAll(req, res, next) {
-        Item.findAll()
+        const option = { include: [{ model: User, as: 'User'}] }
+        Item.findAll(option)
         .then((data) => res.status(200).json(data))
         .catch(next)
     }
 
     static findOne(req, res, next) {
-        const option = { where: { id: req.params.id }}
+        const option = {
+            where: { id: req.params.id },
+            include: [{ model: User, as: 'User'}]
+        }
         Item.findOne(option)
         .then((data) => {
             if (data) {

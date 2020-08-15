@@ -1,4 +1,4 @@
-const { Chapter } = require('../models');
+const { Chapter, Comic, User } = require('../models');
 
 class Controller {
 
@@ -34,11 +34,30 @@ class Controller {
     }
 
     static findComicChapter(req, res, next) {
-        const option = { where: { ComicId: req.params.ComicId }}
-        Chapter.findAll(option)
-        .then((result) => {
-            if (result) {
-                res.status(200).json(result)
+
+        // TODO: Tidy up this code //
+
+        // const option = {
+        //     where: { ComicId: req.params.ComicId },
+        //     include: [{ model: User, as: 'User'}, { model: Comic, as: 'Comic'}]
+        // }
+        Chapter.findAll()
+        .then((chapters) => {
+            if (chapters) {
+                const option = {
+                    where: { id: req.params.ComicId },
+                    include: [{ model: User, as: 'User'}]
+                }
+                Comic.findOne(option)
+                .then((comic) => {
+                    if (comic) {
+                        res.status(200).json({comic, chapters})
+                    } else {
+                        throw { status: 404, message: 'Data not found' }
+                    }
+                })
+                .catch(next)
+                // res.status(200).json(result)
             } else {
                 throw { status: 404, message: 'Data not found' }
             }
