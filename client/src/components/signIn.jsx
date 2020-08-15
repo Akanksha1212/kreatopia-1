@@ -14,7 +14,7 @@ class SignIn extends React.Component {
     this.rightSide.classList.add("right");
   }
 
-  changeState() {
+  changeState() { 
     const { isLogginActive } = this.state;
 
     if (isLogginActive) {
