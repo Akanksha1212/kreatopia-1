@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Comic = sequelize.define('Comic', {
-    UserId: DataTypes.STRING,
+    UserId: DataTypes.INTEGER,
     title: {
       type: DataTypes.STRING,
       allowNull: false,

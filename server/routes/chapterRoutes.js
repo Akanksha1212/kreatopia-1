@@ -5,7 +5,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', chapterController.findAll)
-router.get('/:id', chapterController.findOne)
+router.get('/one/:id', chapterController.findOne)
 router.get('/:ComicId', chapterController.findComicChapter)
 
 router.post('/', authentication, creatorAuth, chapterController.create)

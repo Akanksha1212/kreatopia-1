@@ -1,4 +1,4 @@
-const { Comic } = require('../models');
+const { Comic, User } = require('../models');
 
 class Controller {
 
@@ -15,13 +15,17 @@ class Controller {
     }
 
     static findAll(req, res, next) {
-        Comic.findAll()
+        const option = { include: [{ model: User, as: 'User'}] }
+        Comic.findAll(option)
         .then((data) => res.status(200).json(data))
         .catch(next)
     }
 
     static findOne(req, res, next) {
-        const option = { where: { id: req.params.id }}
+        const option = {
+            where: { id: req.params.id },
+            include: [{ model: User, as: 'User'}]
+        }
         Comic.findOne(option)
         .then((data) => {
             if (data) {
@@ -34,7 +38,7 @@ class Controller {
     }
 
     static findCreatorComic(req, res, next) {
-        const option = { where: { UserId: req.params.id }}
+        const option = { where: { UserId: req.params.id } }
         Comic.findAll(option)
         .then((result) => {
             if (result) {
