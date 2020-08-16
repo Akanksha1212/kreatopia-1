@@ -15,23 +15,23 @@ function Store() {
     // collect the data and change the 'draw' state
     const sampleData = [
       {
-          "name": "Star Wars T-shirt",
-          "price": 400,
-          "preview": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs1.thcdn.com%2Fproductimg%2F960%2F960%2F11205024-4944345848496659.jpg&f=1&nofb=1"
+          "name": "New Art Poster",
+          "price": 8.5,
+          "preview": "https://media.discordapp.net/attachments/509189498484293632/744369007662071901/EcoYZGJUwAAHveh.jpeg"
       },
       {
-          "name": "DC Comics Men's T-shirt",
-          "price": 500,
-          "preview": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs4.thcdn.com%2Fproductimg%2F960%2F960%2F11314296-4034408390275693.jpg&f=1&nofb=1"
+          "name": "Fantasy Digital Art",
+          "price": 8,
+          "preview": "https://media.discordapp.net/attachments/536702581976727562/712848389837946910/6c2d32d6729f384be8474da650b02af8.png"
       },
       {
-        "name": "Star Wars T-shirt",
-        "price": 400,
-        "preview": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs1.thcdn.com%2Fproductimg%2F960%2F960%2F11205024-4944345848496659.jpg&f=1&nofb=1"
+        "name": "Illusion Art Zine",
+        "price": 12,
+        "preview": "https://media.discordapp.net/attachments/509189498484293632/744368112400466061/104717932_1452242011626136_679598100740196536_n.jpg"
     },
     {
-        "name": "DC Comics Men's T-shirt",
-        "price": 500,
+        "name": "Superhero T-shirt",
+        "price": 10,
         "preview": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs4.thcdn.com%2Fproductimg%2F960%2F960%2F11314296-4034408390275693.jpg&f=1&nofb=1"
     },
     
@@ -72,7 +72,7 @@ function Store() {
 
   return (
     <>
-      <div className='store'>
+      <div className='store' style={{ height: "100vh"}}>
         <Draw add={addItem} draw={draw} />
         <Cart edit={cartEdit} order={orderCart} cart={cart} />
         {form?<Order data={cart} cancel={cancelCart} /> : null}

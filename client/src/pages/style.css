@@ -1,0 +1,90 @@
+.rowC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 100px;
+  padding-top: 35px;
+  padding-bottom: 10px;
+}
+
+.row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.row3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.row3 .text {
+  padding-top: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.cartIcon {
+  margin-left: auto;
+}
+
+.shopButton {
+  margin-left: auto;
+}
+
+.card1 {
+  padding: 30px;
+}
+
+.card2 {
+  padding: 30px;
+}
+
+.card3 {
+  padding: 30px;
+}
+
+.features {
+  background-color: #78d3b5;
+}
+
+.videoTag {
+  padding: 40px;
+  height: 10%;
+  width: 30%;
+}
+
+.about {
+  background-color: #9ccfbe;
+}
+/*# sourceMappingURL=style.css.map */

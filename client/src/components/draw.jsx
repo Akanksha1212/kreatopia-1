@@ -4,7 +4,7 @@ export default function Draw(props){
     return(
         <>
         <div className='drawer'>
-            <p className='head'>Shop</p>
+            <p className='head'>Creator's Merch Shop</p>
             <div className='draw'>
             {props.draw.load? props.draw.data.map(item => {
                 return(<div className='item'>

@@ -125,7 +125,7 @@ export default (props) => {
         <section className="about">
         <div className="text">
         <Typography variant="h4" color="textPrimary" component="p">
-            About Us
+            Become a Creator!
           </Typography>
           <Typography variant="h5" color="textSecondary" component="p">
             We provide a platform to people who are interested in selling their art, craft and merchandise and to the comic creators and readers. Our platform provides
@@ -133,8 +133,11 @@ export default (props) => {
               <li>Access to 1000+ comics</li>
               <li>Freedom to decide price</li>
               <li>Easy to use</li>
-        </ul>
+            </ul>
           </Typography>
+          <Button variant="contained" color="secondary" style={{padding: "0.7em", fontSize: "1.5rem"}}>
+            Register as Creator!
+          </Button>
         </div>
         </section>
         <img src=" https://static.dribbble.com/users/3961321/screenshots/7056954/media/ad75040a51a27b9c3db37097af22fca0.jpg" height='500px' width='700px' />
