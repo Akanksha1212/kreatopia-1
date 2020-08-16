@@ -16,35 +16,35 @@ This project was created for Garuda Hacks 2020. Devpost Submission link can be f
 ### ITEM
 | #Method | #Route | #Details |
 | :---: | :---: | :---: |
-| GET | /item | put text here|
-| GET | /item | put text here|
-| POST | /item | put text here|
-| PUT | /item | put text here|
-| DELETE | /item | put text here|
+| GET | /item | Get all items data |
+| GET | /item/:id | Get one item data |
+| POST | /item | Create a new item entry |
+| PUT | /item/:id | Update an existing item |
+| DELETE | /item/:id | Delete an item |
 
 ### COMIC
 | #Method | #Route | #Details |
 | :---: | :---: | :---: |
-| GET | /comic | put text here|
-| GET | /comic | put text here|
-| POST | /comic | put text here|
-| PUT | /comic | put text here|
-| DELETE | /comic | put text here|
+| GET | /comic | Get all comics data |
+| GET | /comic/:id | Get one comic data |
+| POST | /comic | Create a new comic |
+| PUT | /comic/:id | Update comic information |
+| DELETE | /comic/:id | Delete a comic |
 
 ### CHAPTER
 | #Method | #Route | #Details |
 | :---: | :---: | :---: |
-| GET | /chapter | put text here|
-| GET | /chapter | put text here|
-| POST | /chapter | put text here|
-| PUT | /chapter | put text here|
-| DELETE | /chapter | put text here|
+| GET | /chapter | Get all chapters from all comics |
+| GET | /chapter/one/:id | Get one comic chapter |
+| GET | /chapter/:ComicId | Get all chapters of a comic |
+| POST | /chapter | Post a new comic chapter |
+| PUT | /chapter | Update comic chapter |
+| DELETE | /chapter | Delete comic chapter |
 
 ### CART
 | #Method | #Route | #Details |
 | :---: | :---: | :---: |
-| GET | /cart | put text here|
-| GET | /cart | put text here|
-| POST | /cart | put text here|
-| PUT | /cart | put text here|
-| DELETE | /cart | put text here|
+| POST | /cart/:id | Add a new cart data |
+| GET | /cart/:id | Search for one cart data |
+| DELETE | /cart/:id | Remove cart |
+| PUT | /cart/:id | Update cart data |
