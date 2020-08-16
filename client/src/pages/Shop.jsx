@@ -9,14 +9,17 @@ import {
 
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Store from "../components/store";
+import Navbar from "../components/Navbar";
 import "./style.scss";
 import FooterPage from '../components/footer';
 
 export default (props) => {
-    const [openPanel, setOpenPanel] = useState(false);
+  const [openPanel, setOpenPanel] = useState(false);
+
   return (
     <div style={{minHeight: "100vh"}}>
-      <AppBar position="static">
+      <Navbar/>
+      {/* <AppBar position="static">
         <Toolbar>
           <IconButton
             edge="start"
@@ -28,7 +31,7 @@ export default (props) => {
           <div onClick={() => setOpenPanel(true)}><ShoppingCartIcon/></div>
           </div>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
       <Store/>
       <FooterPage/>
     </div>
